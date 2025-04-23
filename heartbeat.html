@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Check Heartbeat</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+ 
+ body {
+      background-color: lightpink;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      background-color: #ffe6eb;
+      padding: 10px 20px;
+    }
+
+    .header img {
+      height: 100px;
+      width: auto;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #d6336c;
+      font-size: 28px;
+    }
+
+    nav {
+      background-color: papayawhip;
+      padding: 10px;
+      text-align: center;
+      border: 2px solid hotpink;
+      border-radius: 5px;
+    }
+
+    nav a {
+      margin: 0 px;
+      text-decoration: none;
+      font-weight: bold;
+      color: hotpink;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #0077cc;
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      margin: 10px auto;
+      max-width: 800px;
+      color: #444;
+    }
+
+    .section {
+      padding: 30px 20px;
+      background-color: #f6d5de;
+      border-top: 2px solid #f48fb1;
+      margin-top: 20px;
+    }
+    footer {
+      background-color:palevioletred;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      color: #444;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #d6336c;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="aaaa.jpg" alt="Health logo">
+    <h1>Healthcare Disease Library</h1>
+  </header>
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a> |
+    <a href="index.html">Disease Info</a> |
+    <a href="walkcount.html">Walk Count</a> |
+    <a href="alarm.html">Medicine Reminder</a> |
+    <a href="heartbeat.html">Check Heartbeat</a> |
+    <a href="bp.html">Check Blood Pressure</a> |
+    <a href="contact.html">Meet Our Doctors</a> |
+  </nav>
+
+  <header>
+    <h2>Check Your Heartbeat</h2>
+    <p>Place your finger on a sensor (or use a heart rate monitor device) and press the button below:</p>
+  </header>
+ <br>
+ <br>
+  <button onclick="checkHeartbeat()">Check Heartbeat</button>
+  <p id="heartbeatResult"></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script>
+    function checkHeartbeat() {
+      const bpm = Math.floor(Math.random() * 41) + 60;
+      const resultText = bpm < 60 ? "Low Heartbeat" : bpm > 100 ? "High Heartbeat" : "Normal Heartbeat";
+      document.getElementById("heartbeatResult").innerText = `Your heart rate is ${bpm} BPM - ${resultText}`;
+    }
+  </script>
+
+  <!-- How It Works Section -->
+  <div class="section">
+    <h3>How It Works</h3>
+    <p>
+      Our system uses a simulated heart rate sensor to help you estimate your pulse rate.
+      When connected to a real sensor, it can accurately measure beats per minute (BPM) and determine whether it is low, normal, or high.
+    </p>
+    <p>
+      Ideal resting heart rate for adults is typically between 60-100 BPM. Always consult a doctor if your readings are abnormal frequently.
+    </p>
+  </div>
+
+  <!-- Tips Section -->
+  <div class="section">
+    <h3>Tips for Accurate Heartbeat Monitoring</h3>
+    <ol>
+      <li>Stay still while measuring your heart rate.</li>
+      <li>Avoid caffeine or intense activity just before measurement.</li>
+      <li>Use a certified heart rate monitoring device for best results.</li>
+      <li>Measure at the same time daily for consistency.</li>
+    </ol>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 HealthConnect | Designed with ❤️ by Shubhada, Harshada,Prachi | Contact: health@connect.com</p>
+    <!-- Footer -->
+<footer style="background: #ffccd5; padding: 20px 0; text-align: center; border-top: 3px solid #f48fb1; border-radius: 12px 12px 0 0; font-family: Arial, sans-serif;">
+    <div style="max-width: 1000px; margin: auto; padding: 10px;">
+      <p style="color: #444; font-size: 16px;">
+        &copy; 2025 Your Clinic Name | All rights reserved.
+      </p>
+      <p style="color: #666; font-size: 14px;">
+        Contact us: <a href="mailto:info@yourclinic.com" style="color: #d6336c; text-decoration: none;">info@yourclinic.com</a> |
+        Phone: <a href="tel:+911234567890" style="color: #d6336c; text-decoration: none;">+91 12345 67890</a>
+      </p>
+      <div style="margin-top: 10px;">
+        <a href="#" style="margin: 0 10px; color: #d6336c; font-size: 18px;">Facebook</a>
+        <a href="#" style="margin: 0 10px; color: #d6336c; font-size: 18px;">Instagram</a>
+        <a href="#" style="margin: 0 10px; color: #d6336c; font-size: 18px;">Twitter</a>
+      </div>
+    </div>
+  </footer>
+  
+  </footer>
+  
+
+</body>
+</html>

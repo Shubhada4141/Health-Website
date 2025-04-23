@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medicine Reminder</title>
+  <style>
+     body {
+      background-color: lightpink;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      background-color: #ffe6eb;
+      padding: 10px 20px;
+    }
+
+    .header img {
+      height: 100px;
+      width: auto;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #d6336c;
+      font-size: 28px;
+    }
+
+    nav {
+      background-color: papayawhip;
+      padding: 10px;
+      text-align: center;
+      border: 2px solid hotpink;
+      border-radius: 5px;
+    }
+
+    nav a {
+      margin: 0 5px;
+      text-decoration: none;
+      font-weight: bold;
+      color: hotpink;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #0077cc;
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      margin: 10px auto;
+      max-width: 800px;
+      color: #444;
+    }
+
+    .section {
+      padding: 30px 20px;
+      background-color: #f6d5de;
+      border-top: 2px solid #f48fb1;
+      margin-top: 20px;
+    }
+    footer {
+      background-color:palevioletred;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      color: #444;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #d6336c;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: hotpink;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #ff69b4;
+    }
+
+  </style>
+</head>
+<body>
+ <header class="header">
+  <img src="aaaa.jpg" alt="Health logo">
+  <h1>Welcome to HealthConnect</h1>
+</header>
+  <script>
+    function checkMedicineTaken() {
+      alert("💊 Great health starts with small steps! You’ll receive a gentle reminder every 6 hours to take your medicine on time. 😊");
+    }
+
+    function playSound() {
+      var audio = document.getElementById('reminderSound');
+      console.log("Play Sound button clicked.");
+
+      if (audio) {
+        audio.play().then(() => {
+          console.log("Sound played successfully.");
+        }).catch((error) => {
+          console.error("Error playing sound:", error);
+          alert("Sound couldn't play. Please check if your browser blocked it or if the file exists.");
+        });
+      } else {
+        console.log("Audio element not found.");
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="home.html">Home</a> |
+    <a href="index.html">Disease Info</a> |
+    <a href="walkcount.html">Walk Count</a> |
+    <a href="alarm.html">Medicine Reminder</a> |
+    <a href="heartbeat.html">Check Heartbeat</a> |
+    <a href="bp.html">Check Blood Pressure</a> |
+    <a href="contact.html">Meet Our Doctors</a>
+  </nav>
+
+  <!-- Content -->
+  <h1>💊 Medicine Reminder</h1>
+  <p>You will be reminded every 6 hours to take your medicine.</p>
+
+  <!-- Buttons -->
+  <button onclick="checkMedicineTaken()">Check Now</button>
+  <button onclick="playSound()">🔊 Play Sound Now</button>
+
+  <!-- Audio Element -->
+  <audio id="reminderSound" preload="auto">
+    <source src="reminder.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- How It Works Section -->
+  <div class="section">
+    <h2>How It Works</h2>
+    <p>1. ⏰ Automatic Alert Every 6 Hours - The system is set to play a reminder sound every 6 hours, letting you know it's time for your medicine.</p>
+    <p>2. 🎵 Manual Sound Option - You can click the "🔊 Play Sound Now" button anytime to manually play the reminder sound.</p>
+    <p>3. ✅ Check Status - The "Check Now" button confirms whether you've taken your medicine and logs the time in your mind.</p>
+    <p>4. 🕒 Reliable Timer - The reminder uses a timer (JavaScript-based) that keeps track of the hours since the last reminder.</p>
+  </div>
+
+  <!-- Why It Matters Section -->
+  <div class="section">
+    <h2>💡 Why Medicine Reminders Matter</h2>
+    <p>Regular medicine intake improves your recovery rate, maintains stable health conditions, and prevents complications. With timely reminders, HealthConnect helps you stay on track with your health goals.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 HealthConnect | Designed with ❤️ by Shubhada , Prachi , Harshada  | Contact: health@connect.com</p>
+    <!-- Footer -->
+<footer style="background: #ffccd5; padding: 20px 0; text-align: center; border-top: 3px solid #f48fb1; border-radius: 12px 12px 0 0; font-family: Arial, sans-serif;">
+    <div style="max-width: 1000px; margin: auto; padding: 10px;">
+      <p style="color: #444; font-size: 16px;">
+        &copy; 2025 Your Clinic Name | All rights reserved.
+      </p>
+      <p style="color: #666; font-size: 14px;">
+        Contact us: <a href="mailto:info@yourclinic.com" style="color: #d6336c; text-decoration: none;">info@yourclinic.com</a> |
+        Phone: <a href="tel:+911234567890" style="color: #d6336c; text-decoration: none;">+91 12345 67890</a>
+      </p>
+      <div style="margin-top: 10px;">
+        <a href="#" style="margin: 0 10px; color: #d6336c; font-size: 18px;">Facebook</a>
+        <a href="#" style="margin: 0 10px; color: #d6336c; font-size: 18px;">Instagram</a>
+        <a href="#" style="margin: 0 10px; color: #d6336c; font-size: 18px;">Twitter</a>
+      </div>
+    </div>
+  </footer>
+  
+  </footer>
+</body>
+</html>
